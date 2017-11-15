@@ -13,9 +13,15 @@
 # -------------------------------------------#
 
 C_COMPILER=gcc
+LIB=Calculator.h
+UNITY=../unity/src/unity.c
 
-test:
-	$(C_COMPILER) TestCalculator.c Calculator.c unity/src/unity.c -o test
+test: Calculator.c TestCalculator.c $(LIB)
+	$(C_COMPILER) -c Calculator.c
+	$(C_COMPILER) TestCalculator.c Calculator.o $(UNITY) -o test
+	-del -f *.o
 
-calc:
+calc: Calculator.c main.c $(LIB)
+	$(C_COMPILER) -c Calculator.c
 	$(C_COMPILER) main.c Calculator.c -o calc
+	-del -f *.o
