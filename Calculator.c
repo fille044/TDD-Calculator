@@ -1,3 +1,15 @@
+/* -------------------------------------------*/
+/*
+    Filip Lindström & Johan Kämpe
+    Last changed :  2017 - 11- 15
+    Created:        2017 - 11 - 15
+
+    Test och verifiering - Mölk Utbildning
+
+    Description: All calculations required for a simple calculator.
+*/
+/* -------------------------------------------*/
+
 #include "Calculator.h"
 
 int Subtraction(int a, int b)

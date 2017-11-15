@@ -1,3 +1,15 @@
+/* -------------------------------------------*/
+/*
+    Filip Lindström & Johan Kämpe
+    Last changed :  2017 - 11- 15
+    Created:        2017 - 11 - 15
+
+    Test och verifiering - Mölk Utbildning
+
+    Description: Library for Calculator.c
+*/
+/* -------------------------------------------*/
+
 #include <stdint.h>
 
 int Addition(int a, int b);

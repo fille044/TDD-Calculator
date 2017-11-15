@@ -1,3 +1,15 @@
+/* -------------------------------------------*/
+/*
+    Filip Lindström & Johan Kämpe
+    Last changed :  2017 - 11- 15
+    Created:        2017 - 11 - 15
+
+    Test och verifiering - Mölk Utbildning
+
+    Description: User interface to use calculator
+*/
+/* -------------------------------------------*/
+
 #include "Calculator.h"
 #include <stdio.h>
 
@@ -19,5 +31,6 @@ int main()
 
     sumdiv = Division(a, b);
     printf("Div: %.2f\n", sumdiv);
+    
     return 0;
 }

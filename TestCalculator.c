@@ -5,6 +5,8 @@
     Created:        2017 - 11 - 15
 
     Test och verifiering - Mölk Utbildning
+
+    Description: Test cases for calculations made in Calculator.c
 */
 /* -------------------------------------------*/
 
