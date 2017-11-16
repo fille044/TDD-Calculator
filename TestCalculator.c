@@ -1,18 +1,19 @@
 /* -------------------------------------------*/
 /*
-    Filip LindstrÃ¶m & Johan KÃ¤mpe
+    Filip Lindström & Johan Kämpe
     Last changed :  2017 - 11- 15
     Created:        2017 - 11 - 15
 
-    Test och verifiering - MÃ¶lk Utbildning
+    Test och verifiering - Mölk Utbildning
 
     Description: Test cases for calculations made in Calculator.c
 */
 /* -------------------------------------------*/
 
-#include "unity/src/unity.h"
+#include "../unity/src/unity.h"
 #include "Calculator.h"
 #include <stdio.h>
+#include <math.h> // pow
 
 // Compile commands     gcc TestDumbExample.c DumbExample.c unity/src/unity.c -o TestDumbExample
 
@@ -52,6 +53,16 @@ void test_Division(void)
     TEST_ASSERT_EQUAL_FLOAT(sum, Division(a, b));
 }
 
+/* Tests power of */
+void test_PowerOf(void)
+{
+    TEST_ASSERT_EQUAL(4, PowerOf(2, 2));
+    TEST_ASSERT_EQUAL(729, PowerOf(3, 6));
+    TEST_ASSERT_EQUAL(1, PowerOf(-3, 0));
+    TEST_ASSERT_EQUAL_FLOAT(pow(5,-3), PowerOf(5, -3));
+    TEST_ASSERT_EQUAL_FLOAT(pow(65,-32), PowerOf(65, -32));
+}
+
 int main(void)
 {
     UNITY_BEGIN();
@@ -59,5 +70,6 @@ int main(void)
     RUN_TEST(test_Subtraction);
     RUN_TEST(test_Multiplication);
     RUN_TEST(test_Division);
+    RUN_TEST(test_PowerOf);
     return UNITY_END();
 }
