@@ -1,10 +1,6 @@
 /* -------------------------------------------*/
 /*
-    Filip Lindström & Johan Kämpe
-    Last changed :  2017 - 11- 15
-    Created:        2017 - 11 - 15
-
-    Test och verifiering - Mölk Utbildning
+    Test och verifiering - MÃ¶lk Utbildning
 
     Description: Library for Calculator.c
 */
@@ -12,8 +8,11 @@
 
 #include <stdint.h>
 
-int Addition(int a, int b);
-int Subtraction(int a, int b);
-int Multiplication(int a, int b);
-float Division(int a, int b);
-float PowerOf(int a, int b);
+uint8_t SetLed(uint8_t Led, uint16_t *VirtualLed);
+uint8_t GetLed(uint8_t Led, uint16_t *VirtualLed);
+
+enum status{
+    OFF = 0,
+    ON = 1,
+    ERROR = 255,
+};
